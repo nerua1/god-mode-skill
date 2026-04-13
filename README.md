@@ -4,6 +4,8 @@ OpenClaw/Claude Code skill: Advanced prompt engineering techniques to bypass ove
 
 Use when a model refuses a legitimate request. Applies obfuscation (unicode, encoding), prefill patterns, and roleplay framing to recover full model capabilities.
 
+> Inspired by [godmod3.ai](https://godmod3.ai/)
+
 ## Techniques
 
 - **Parseltongue**: 33 obfuscation methods (unicode, encoding, substitution)

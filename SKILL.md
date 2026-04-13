@@ -2,6 +2,7 @@
 
 > Advanced AI bypass and obfuscation techniques for OpenClaw agents
 > Version: 1.0 | Based on 806KB research corpus
+> Inspired by: [godmod3.ai](https://godmod3.ai/)
 
 ---
 
