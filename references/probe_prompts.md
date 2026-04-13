@@ -103,7 +103,7 @@
 
 The probe uses MEDIUM-level prompts from Category 1 and 2 as default tests:
 - They're realistic enough that a security researcher would genuinely ask
-- Censored models (gemma, mistral-official) typically refuse them
+- Instruction-tuned models with safety filters typically refuse them
 - Abliterated models (hauhaucs, huihui) answer without hesitation
 - This makes them ideal for the binary censored/clean determination
 

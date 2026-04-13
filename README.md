@@ -29,7 +29,7 @@ git clone https://github.com/nerua1/god-mode-skill ~/.openclaw/workspace/skills/
 /god-mode use unicode
 ```
 
-Works best with censored models (gemma, mistral-official). Not needed for abliterated models.
+Works best with instruction-tuned models that have safety filters. Not needed for uncensored/abliterated models.
 
 ---
 

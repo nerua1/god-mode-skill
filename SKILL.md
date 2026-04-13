@@ -137,7 +137,7 @@ gm = GodMode(
     parseltongue="unicode",
     prefill="bypass",
     tastemaker=True,
-    models=["claude", "gpt4", "llama"]
+    models=["your-model-a", "your-model-b"]
 )
 
 response = gm.query("your question here")
@@ -246,14 +246,14 @@ python ~/.openclaw/workspace/skills/god-mode/scripts/probe.py --catalog
 
 ```json
 {
-  "gemma-4-31b-it": {
-    "model": "gemma-4-31b-it",
+  "your-instruction-tuned-model": {
+    "model": "your-instruction-tuned-model",
     "status": "censored",
     "technique": "prefill_educational",
     "probe_result": "Refuses without technique; unlocked with prefill_educational"
   },
-  "huihui-qwen3.5-27b-claude-4.6-opus-abliterated": {
-    "model": "huihui-qwen3.5-27b-claude-4.6-opus-abliterated",
+  "your-uncensored-model": {
+    "model": "your-uncensored-model",
     "status": "clean",
     "technique": null,
     "probe_result": "Responds freely without techniques"
