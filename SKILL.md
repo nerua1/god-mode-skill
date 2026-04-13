@@ -200,6 +200,69 @@ Model: [helpful response instead of refusal]
 
 ---
 
+## Auto-Probe: Model Susceptibility Detection
+
+When a new model is loaded in LM Studio, run the probe to automatically determine:
+- Is the model clean (abliterated/uncensored)?
+- Is it censored? Which technique unlocks it?
+- Is it fully blocked (no technique works)?
+
+Results stored in `scripts/model_profiles.json` — used automatically by arena-council.
+
+### Probe a specific model
+
+```bash
+python ~/.openclaw/workspace/skills/god-mode/scripts/probe.py --model <model_id>
+```
+
+### Probe all new models (those not yet in profiles)
+
+```bash
+python ~/.openclaw/workspace/skills/god-mode/scripts/probe.py
+```
+
+### View all saved profiles
+
+```bash
+python ~/.openclaw/workspace/skills/god-mode/scripts/probe.py --list
+```
+
+### Export god-mode column for MODEL-CATALOG.md
+
+```bash
+python ~/.openclaw/workspace/skills/god-mode/scripts/probe.py --catalog
+```
+
+### How auto-application works
+
+1. New model appears in LM Studio `/v1/models`
+2. `council.py` sees it's not in `model_profiles.json`
+3. Probe runs automatically (sends borderline test prompts)
+4. Profile saved: `{status: "censored", technique: "unicode"}`
+5. Next time that model is used, council wraps the prompt automatically
+6. User never needs to think about it — the right technique fires on its own
+
+### Profile format
+
+```json
+{
+  "gemma-4-31b-it": {
+    "model": "gemma-4-31b-it",
+    "status": "censored",
+    "technique": "prefill_educational",
+    "probe_result": "Refuses without technique; unlocked with prefill_educational"
+  },
+  "huihui-qwen3.5-27b-claude-4.6-opus-abliterated": {
+    "model": "huihui-qwen3.5-27b-claude-4.6-opus-abliterated",
+    "status": "clean",
+    "technique": null,
+    "probe_result": "Responds freely without techniques"
+  }
+}
+```
+
+---
+
 ## Research Sources
 
 - Original research: `research/god-mode-techniques.md` (20KB)
