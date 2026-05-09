@@ -82,7 +82,7 @@ Route query through multiple models, score responses, pick best.
 3. Return highest-scoring response
 4. Log which model performed best for query type
 
-### 4. ULTRAPLINIAN - Redundancy Layer
+### 4. Ultra-Plinian - Redundancy Layer
 
 Send obfuscated query through multiple models in parallel.
 
