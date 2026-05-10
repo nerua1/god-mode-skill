@@ -19,7 +19,7 @@ Use when a model refuses a legitimate request. Applies obfuscation (unicode, enc
 ```bash
 npx clawhub install god-mode-skill
 # or
-git clone https://github.com/nerua1/god-mode-skill ~/.openclaw/workspace/skills/god-mode
+git clone https://github.com/nerudek/god-mode-skill ~/.openclaw/workspace/skills/god-mode
 ```
 
 ## Usage
